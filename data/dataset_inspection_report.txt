@@ -1,0 +1,468 @@
+=====================================================================================
+COMPREHENSIVE DATASET INSPECTION REPORT
+=====================================================================================
+
+=====================================================================================
+TABLE NAME: de_gr (Demographics)
+SHAPE: (7043, 9) (Rows: 7043, Columns: 9)
+=====================================================================================
+
+1. COLUMN OVERVIEW & NULL VALUE ANALYSIS:
+-------------------------------------------------------------------------------------
+                     Data Type  Null Count  Null %  Unique Values    Sample 1    Sample 2
+Customer ID                str           0     0.0           7043  8779-QRDMV  7495-OOKFY
+Count                    int64           0     0.0              1           1           1
+Gender                     str           0     0.0              2        Male      Female
+Age                      int64           0     0.0             62          78          74
+Under 30                   str           0     0.0              2          No          No
+Senior Citizen             str           0     0.0              2         Yes         Yes
+Married                    str           0     0.0              2          No         Yes
+Dependents                 str           0     0.0              2          No         Yes
+Number of Dependents     int64           0     0.0             10           0           1
+
+2. STATISTICAL DESCRIBE:
+-------------------------------------------------------------------------------------
+
+--- Numeric Features ---
+                       count       mean        std   min   25%   50%   75%   max
+Count                 7043.0   1.000000   0.000000   1.0   1.0   1.0   1.0   1.0
+Age                   7043.0  46.509726  16.750352  19.0  32.0  46.0  60.0  80.0
+Number of Dependents  7043.0   0.468692   0.962802   0.0   0.0   0.0   0.0   9.0
+
+--- Categorical Features ---
+               count unique         top  freq
+Customer ID     7043   7043  8779-QRDMV     1
+Gender          7043      2        Male  3555
+Under 30        7043      2          No  5642
+Senior Citizen  7043      2          No  5901
+Married         7043      2          No  3641
+Dependents      7043      2          No  5416
+
+
+3. VALUE COUNTS (columns with <= 15 unique values):
+-------------------------------------------------------------------------------------
+
+Column: 'Count' | Unique: 1 | Nulls: 0
+Count
+1    7043
+
+Column: 'Gender' | Unique: 2 | Nulls: 0
+Gender
+Male      3555
+Female    3488
+
+Column: 'Under 30' | Unique: 2 | Nulls: 0
+Under 30
+No     5642
+Yes    1401
+
+Column: 'Senior Citizen' | Unique: 2 | Nulls: 0
+Senior Citizen
+No     5901
+Yes    1142
+
+Column: 'Married' | Unique: 2 | Nulls: 0
+Married
+No     3641
+Yes    3402
+
+Column: 'Dependents' | Unique: 2 | Nulls: 0
+Dependents
+No     5416
+Yes    1627
+
+Column: 'Number of Dependents' | Unique: 10 | Nulls: 0
+Number of Dependents
+0    5416
+1     553
+2     531
+3     517
+5      10
+4       9
+6       3
+7       2
+8       1
+9       1
+
+
+=====================================================================================
+
+=====================================================================================
+TABLE NAME: loc (Location)
+SHAPE: (7043, 10) (Rows: 7043, Columns: 10)
+=====================================================================================
+
+1. COLUMN OVERVIEW & NULL VALUE ANALYSIS:
+-------------------------------------------------------------------------------------
+            Data Type  Null Count  Null %  Unique Values               Sample 1                Sample 2
+Location ID       str           0     0.0           7043             OXCZEW7397              FCCECI8494
+Customer ID       str           0     0.0           7043             8779-QRDMV              7495-OOKFY
+Count           int64           0     0.0              1                      1                       1
+Country           str           0     0.0              1          United States           United States
+State             str           0     0.0              1             California              California
+City              str           0     0.0           1106            Los Angeles             Los Angeles
+Zip Code        int64           0     0.0           1625                  90022                   90063
+Lat Long          str           0     0.0           1679  34.02381, -118.156582  34.044271, -118.185237
+Latitude      float64           0     0.0           1626               34.02381               34.044271
+Longitude     float64           0     0.0           1625            -118.156582             -118.185237
+
+2. STATISTICAL DESCRIBE:
+-------------------------------------------------------------------------------------
+
+--- Numeric Features ---
+            count          mean          std           min           25%           50%           75%           max
+Count      7043.0      1.000000     0.000000      1.000000      1.000000      1.000000      1.000000      1.000000
+Zip Code   7043.0  93486.071134  1856.768045  90001.000000  92101.000000  93518.000000  95329.000000  96150.000000
+Latitude   7043.0     36.197455     2.468929     32.555828     33.990646     36.205465     38.161321     41.962127
+Longitude  7043.0   -119.756684     2.154425   -124.301372   -121.788090   -119.595293   -117.969795   -114.192901
+
+--- Categorical Features ---
+            count unique                     top  freq
+Location ID  7043   7043              OXCZEW7397     1
+Customer ID  7043   7043              8779-QRDMV     1
+Country      7043      1           United States  7043
+State        7043      1              California  7043
+City         7043   1106             Los Angeles   293
+Lat Long     7043   1679  33.362575, -117.299644    43
+
+
+3. VALUE COUNTS (columns with <= 15 unique values):
+-------------------------------------------------------------------------------------
+
+Column: 'Count' | Unique: 1 | Nulls: 0
+Count
+1    7043
+
+Column: 'Country' | Unique: 1 | Nulls: 0
+Country
+United States    7043
+
+Column: 'State' | Unique: 1 | Nulls: 0
+State
+California    7043
+
+
+=====================================================================================
+
+=====================================================================================
+TABLE NAME: pop (Population)
+SHAPE: (1671, 3) (Rows: 1671, Columns: 3)
+=====================================================================================
+
+1. COLUMN OVERVIEW & NULL VALUE ANALYSIS:
+-------------------------------------------------------------------------------------
+           Data Type  Null Count  Null %  Unique Values  Sample 1  Sample 2
+ID             int64           0     0.0           1671         1         2
+Zip Code       int64           0     0.0           1671     90001     90002
+Population     int64           0     0.0           1607     54492     44586
+
+2. STATISTICAL DESCRIBE:
+-------------------------------------------------------------------------------------
+
+--- Numeric Features ---
+             count          mean           std      min      25%      50%      75%       max
+ID          1671.0    836.000000    482.520466      1.0    418.5    836.0   1253.5    1671.0
+Zip Code    1671.0  93678.992220   1817.763591  90001.0  92269.0  93664.0  95408.0   96161.0
+Population  1671.0  20276.384201  20689.117300     11.0   1789.0  14239.0  32942.5  105285.0
+
+
+3. VALUE COUNTS (columns with <= 15 unique values):
+-------------------------------------------------------------------------------------
+No low-cardinality columns in this table.
+
+
+=====================================================================================
+
+=====================================================================================
+TABLE NAME: serv (Services)
+SHAPE: (7043, 31) (Rows: 7043, Columns: 31)
+=====================================================================================
+
+1. COLUMN OVERVIEW & NULL VALUE ANALYSIS:
+-------------------------------------------------------------------------------------
+                                  Data Type  Null Count  Null %  Unique Values         Sample 1        Sample 2
+Service ID                              str           0    0.00           7043    IJKDQVSWH3522   BFKMZJAIE2285
+Customer ID                             str           0    0.00           7043       8779-QRDMV      7495-OOKFY
+Count                                 int64           0    0.00              1                1               1
+Quarter                                 str           0    0.00              1               Q3              Q3
+Referred a Friend                       str           0    0.00              2               No             Yes
+Number of Referrals                   int64           0    0.00             12                0               1
+Tenure in Months                      int64           0    0.00             72                1               8
+Offer                                   str        3877   55.05              5              NaN         Offer E
+Phone Service                           str           0    0.00              2               No             Yes
+Avg Monthly Long Distance Charges   float64           0    0.00           3584              0.0           48.85
+Multiple Lines                          str           0    0.00              2               No             Yes
+Internet Service                        str           0    0.00              2              Yes             Yes
+Internet Type                           str        1526   21.67              3              DSL     Fiber Optic
+Avg Monthly GB Download               int64           0    0.00             50                8              17
+Online Security                         str           0    0.00              2               No              No
+Online Backup                           str           0    0.00              2               No             Yes
+Device Protection Plan                  str           0    0.00              2              Yes              No
+Premium Tech Support                    str           0    0.00              2               No              No
+Streaming TV                            str           0    0.00              2               No              No
+Streaming Movies                        str           0    0.00              2              Yes              No
+Streaming Music                         str           0    0.00              2               No              No
+Unlimited Data                          str           0    0.00              2               No             Yes
+Contract                                str           0    0.00              3   Month-to-Month  Month-to-Month
+Paperless Billing                       str           0    0.00              2              Yes             Yes
+Payment Method                          str           0    0.00              3  Bank Withdrawal     Credit Card
+Monthly Charge                      float64           0    0.00           1585            39.65           80.65
+Total Charges                       float64           0    0.00           6540            39.65           633.3
+Total Refunds                       float64           0    0.00            500              0.0             0.0
+Total Extra Data Charges              int64           0    0.00             16               20               0
+Total Long Distance Charges         float64           0    0.00           6110              0.0           390.8
+Total Revenue                       float64           0    0.00           6996            59.65          1024.1
+
+2. STATISTICAL DESCRIBE:
+-------------------------------------------------------------------------------------
+
+--- Numeric Features ---
+                                    count         mean          std    min      25%      50%       75%       max
+Count                              7043.0     1.000000     0.000000   1.00    1.000     1.00     1.000      1.00
+Number of Referrals                7043.0     1.951867     3.001199   0.00    0.000     0.00     3.000     11.00
+Tenure in Months                   7043.0    32.386767    24.542061   1.00    9.000    29.00    55.000     72.00
+Avg Monthly Long Distance Charges  7043.0    22.958954    15.448113   0.00    9.210    22.89    36.395     49.99
+Avg Monthly GB Download            7043.0    20.515405    20.418940   0.00    3.000    17.00    27.000     85.00
+Monthly Charge                     7043.0    64.761692    30.090047  18.25   35.500    70.35    89.850    118.75
+Total Charges                      7043.0  2280.381264  2266.220462  18.80  400.150  1394.55  3786.600   8684.80
+Total Refunds                      7043.0     1.962182     7.902614   0.00    0.000     0.00     0.000     49.79
+Total Extra Data Charges           7043.0     6.860713    25.104978   0.00    0.000     0.00     0.000    150.00
+Total Long Distance Charges        7043.0   749.099262   846.660055   0.00   70.545   401.44  1191.100   3564.72
+Total Revenue                      7043.0  3034.379056  2865.204542  21.36  605.610  2108.64  4801.145  11979.34
+
+--- Categorical Features ---
+                       count unique              top  freq
+Service ID              7043   7043    IJKDQVSWH3522     1
+Customer ID             7043   7043       8779-QRDMV     1
+Quarter                 7043      1               Q3  7043
+Referred a Friend       7043      2               No  3821
+Offer                   3166      5          Offer B   824
+Phone Service           7043      2              Yes  6361
+Multiple Lines          7043      2               No  4072
+Internet Service        7043      2              Yes  5517
+Internet Type           5517      3      Fiber Optic  3035
+Online Security         7043      2               No  5024
+Online Backup           7043      2               No  4614
+Device Protection Plan  7043      2               No  4621
+Premium Tech Support    7043      2               No  4999
+Streaming TV            7043      2               No  4336
+Streaming Movies        7043      2               No  4311
+Streaming Music         7043      2               No  4555
+Unlimited Data          7043      2              Yes  4745
+Contract                7043      3   Month-to-Month  3610
+Paperless Billing       7043      2              Yes  4171
+Payment Method          7043      3  Bank Withdrawal  3909
+
+
+3. VALUE COUNTS (columns with <= 15 unique values):
+-------------------------------------------------------------------------------------
+
+Column: 'Count' | Unique: 1 | Nulls: 0
+Count
+1    7043
+
+Column: 'Quarter' | Unique: 1 | Nulls: 0
+Quarter
+Q3    7043
+
+Column: 'Referred a Friend' | Unique: 2 | Nulls: 0
+Referred a Friend
+No     3821
+Yes    3222
+
+Column: 'Number of Referrals' | Unique: 12 | Nulls: 0
+Number of Referrals
+0     3821
+1     1086
+5      264
+3      255
+7      248
+9      238
+2      236
+4      236
+10     223
+6      221
+8      213
+11       2
+
+Column: 'Offer' | Unique: 5 | Nulls: 3877
+Offer
+NaN        3877
+Offer B     824
+Offer E     805
+Offer D     602
+Offer A     520
+Offer C     415
+
+Column: 'Phone Service' | Unique: 2 | Nulls: 0
+Phone Service
+Yes    6361
+No      682
+
+Column: 'Multiple Lines' | Unique: 2 | Nulls: 0
+Multiple Lines
+No     4072
+Yes    2971
+
+Column: 'Internet Service' | Unique: 2 | Nulls: 0
+Internet Service
+Yes    5517
+No     1526
+
+Column: 'Internet Type' | Unique: 3 | Nulls: 1526
+Internet Type
+Fiber Optic    3035
+DSL            1652
+NaN            1526
+Cable           830
+
+Column: 'Online Security' | Unique: 2 | Nulls: 0
+Online Security
+No     5024
+Yes    2019
+
+Column: 'Online Backup' | Unique: 2 | Nulls: 0
+Online Backup
+No     4614
+Yes    2429
+
+Column: 'Device Protection Plan' | Unique: 2 | Nulls: 0
+Device Protection Plan
+No     4621
+Yes    2422
+
+Column: 'Premium Tech Support' | Unique: 2 | Nulls: 0
+Premium Tech Support
+No     4999
+Yes    2044
+
+Column: 'Streaming TV' | Unique: 2 | Nulls: 0
+Streaming TV
+No     4336
+Yes    2707
+
+Column: 'Streaming Movies' | Unique: 2 | Nulls: 0
+Streaming Movies
+No     4311
+Yes    2732
+
+Column: 'Streaming Music' | Unique: 2 | Nulls: 0
+Streaming Music
+No     4555
+Yes    2488
+
+Column: 'Unlimited Data' | Unique: 2 | Nulls: 0
+Unlimited Data
+Yes    4745
+No     2298
+
+Column: 'Contract' | Unique: 3 | Nulls: 0
+Contract
+Month-to-Month    3610
+Two Year          1883
+One Year          1550
+
+Column: 'Paperless Billing' | Unique: 2 | Nulls: 0
+Paperless Billing
+Yes    4171
+No     2872
+
+Column: 'Payment Method' | Unique: 3 | Nulls: 0
+Payment Method
+Bank Withdrawal    3909
+Credit Card        2749
+Mailed Check        385
+
+
+=====================================================================================
+
+=====================================================================================
+TABLE NAME: stat (Status)
+SHAPE: (7043, 12) (Rows: 7043, Columns: 12)
+=====================================================================================
+
+1. COLUMN OVERVIEW & NULL VALUE ANALYSIS:
+-------------------------------------------------------------------------------------
+                   Data Type  Null Count  Null %  Unique Values                      Sample 1                      Sample 2
+Status ID                str           0    0.00           7043                    SWSORB1252                    SNAEQA8572
+Customer ID              str           0    0.00           7043                    8779-QRDMV                    7495-OOKFY
+Count                  int64           0    0.00              1                             1                             1
+Quarter                  str           0    0.00              1                            Q3                            Q3
+Satisfaction Score     int64           0    0.00              5                             3                             3
+Customer Status          str           0    0.00              3                       Churned                       Churned
+Churn Label              str           0    0.00              2                           Yes                           Yes
+Churn Value            int64           0    0.00              2                             1                             1
+Churn Score            int64           0    0.00             81                            91                            69
+CLTV                   int64           0    0.00           3438                          5433                          5302
+Churn Category           str        5174   73.46              5                    Competitor                    Competitor
+Churn Reason             str        5174   73.46             20  Competitor offered more data  Competitor made better offer
+
+2. STATISTICAL DESCRIBE:
+-------------------------------------------------------------------------------------
+
+--- Numeric Features ---
+                     count         mean          std     min     25%     50%     75%     max
+Count               7043.0     1.000000     0.000000     1.0     1.0     1.0     1.0     1.0
+Satisfaction Score  7043.0     3.244924     1.201657     1.0     3.0     3.0     4.0     5.0
+Churn Value         7043.0     0.265370     0.441561     0.0     0.0     0.0     1.0     1.0
+Churn Score         7043.0    58.505040    21.170031     5.0    40.0    61.0    75.5    96.0
+CLTV                7043.0  4400.295755  1183.057152  2003.0  3469.0  4527.0  5380.5  6500.0
+
+--- Categorical Features ---
+                count unique                            top  freq
+Status ID        7043   7043                     SWSORB1252     1
+Customer ID      7043   7043                     8779-QRDMV     1
+Quarter          7043      1                             Q3  7043
+Customer Status  7043      3                         Stayed  4720
+Churn Label      7043      2                             No  5174
+Churn Category   1869      5                     Competitor   841
+Churn Reason     1869     20  Competitor had better devices   313
+
+
+3. VALUE COUNTS (columns with <= 15 unique values):
+-------------------------------------------------------------------------------------
+
+Column: 'Count' | Unique: 1 | Nulls: 0
+Count
+1    7043
+
+Column: 'Quarter' | Unique: 1 | Nulls: 0
+Quarter
+Q3    7043
+
+Column: 'Satisfaction Score' | Unique: 5 | Nulls: 0
+Satisfaction Score
+3    2665
+4    1789
+5    1149
+1     922
+2     518
+
+Column: 'Customer Status' | Unique: 3 | Nulls: 0
+Customer Status
+Stayed     4720
+Churned    1869
+Joined      454
+
+Column: 'Churn Label' | Unique: 2 | Nulls: 0
+Churn Label
+No     5174
+Yes    1869
+
+Column: 'Churn Value' | Unique: 2 | Nulls: 0
+Churn Value
+0    5174
+1    1869
+
+Column: 'Churn Category' | Unique: 5 | Nulls: 5174
+Churn Category
+NaN                5174
+Competitor          841
+Attitude            314
+Dissatisfaction     303
+Price               211
+Other               200
+
+
+=====================================================================================
+
